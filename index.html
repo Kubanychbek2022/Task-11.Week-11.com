@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Список книг</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="inner">
+    <div class="container">
+          <h1 class="book-title">Список книг</h1>
+          <form id="book-form">
+            <label for="title" id="label">Название</label>
+            <input type="text" id="title" class="input">
+
+            <label for="author" id="label">Автор</label>
+            <input type="text" id="author" class="input">
+
+            <label for="isbn" id="label">ISBN</label>
+            <input type="text" id="isbn" class="input">
+
+            <input type="submit" class="input" id="submit" value="Добавить">
+          </form>
+          <table id="book-table">
+            <thead>
+              <tr>
+                <th class="row">Название</th>
+                <th class="row">Автор</th>
+                <th class="row">ISBN</th>
+              </tr>
+            </thead>
+
+            <tbody id="book-list"></tbody>
+          </table>
+    </div>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>

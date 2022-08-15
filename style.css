@@ -1,0 +1,69 @@
+html {
+  box-sizing: border-box;
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-size: 18px;
+  line-height: normal;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #d5d5c2;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px; 
+}
+
+.book-title {
+  color: #333;
+  font-size: 45px;
+}
+
+#book-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#label {
+  color: black;
+  font-size: 25px;
+}
+
+.input {
+  margin-bottom: 30px;
+  padding: 10px;
+  font-family: sans-serif;
+}
+
+
+#book-table {
+ margin: 0 auto;
+ border-spacing: 210px 0;
+}
+
+.success, 
+.error  {
+  color: #fff;
+  font-size: 20px;
+  padding: 15px;
+  border: 1px solid black;
+  transform: translateY(-18px);
+}
+
+.success {
+  background-color: green;
+}
+
+.error {
+  background-color: red;
+}
+
