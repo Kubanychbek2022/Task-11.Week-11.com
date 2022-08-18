@@ -96,7 +96,7 @@ class LocalStore {
     books.forEach(function (isbn, index) {
         if (books.isbn === isbn) {
           books.splice(index, 1);
-        }
+     }
     })
 
     localStorage.setItem(this.key, JSON.stringify(books));
