@@ -44,9 +44,10 @@ class UI {
   }
 
 
-  removeBook () {
-    const deleteBtn = document.querySelector(".delete");
-    deleteBtn.parentElement.remove();
+  removeBook (target) {
+   if (target.className === "delete") {
+    target.parentElement.remove();
+   }
     }
   
 }
@@ -93,13 +94,15 @@ class LocalStore {
   removeStore () {
     let books = this.getBooks();
 
-    books.forEach(function (isbn, index) {
-        if (books.isbn === isbn) {
-          books.splice(index, 1);
-     }
-    })
+    books.forEach(() => {
+      for (let i = 0; i < books.length; i++) {
+        if (books.title !== "") {
+          books.splice(i, 1);
 
-    localStorage.setItem(this.key, JSON.stringify(books));
+          localStorage.setItem(this.key, JSON.stringify(books));
+        }
+      }
+    })
   }
 
 }
@@ -147,8 +150,8 @@ const store = new LocalStore();
 document.querySelector("#book-list").addEventListener("click", function (e) {
   const ui = new UI();
   const store = new LocalStore();
-  
-  ui.removeBook();
+ const btnDelete = document.querySelector(".delete");
+  ui.removeBook(btnDelete);
   store.removeStore();
   ui.showAlert("Книга удалено", "success");
   
